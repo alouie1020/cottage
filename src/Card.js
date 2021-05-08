@@ -35,10 +35,8 @@ export default class Card extends Component {
                 <div className="aduCard">
                     <form className="aduCard__form" onSubmit={this.saveChanges}>
                         <div className="aduCard__header">
-                            {/* {isEditable ? <button type="submit" className="btn">Save</button> : ''} */}
                             {isEditable ? <button type="submit" style={{ background: "none", border: "none", fontSize: "17px" }}><FaSave style={{ color: '#8090f2', marginTop: '4px' }}/></button> : ''}
                             {isEditable ? <FaBan onClick={this.props.toggleEdit.bind(this, id)} style={{ color: '#ed4334' }}/> : <FaPencilAlt onClick={this.props.toggleEdit.bind(this, id)} style={{ color: '#fcca00', marginRight: '8px'}} />}
-                            {/* <input type="button" onClick={this.props.toggleEdit.bind(this, id)} value={isEditable ? <FaBan /> : <FaPencilAlt />} /> */}
                             {isEditable ? '' : <FaTimes onClick={this.props.deleteCard.bind(this, id)} style={{ color: '#ed4334' }} />}
                         </div>
                         <div className="formGroup">

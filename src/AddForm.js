@@ -18,7 +18,7 @@ export default class AddForm extends Component {
     onSubmit = (e) => {
         e.preventDefault(); 
         
-        // validation would go here. In this case I decided that address, beds, and baths were required
+        // I decided that address, beds, and baths would be required
         if (!this.state.address || !this.state.br || !this.state.ba) {
             alert('Address, # of Bedrooms, and # of Bathrooms required')
             return;
